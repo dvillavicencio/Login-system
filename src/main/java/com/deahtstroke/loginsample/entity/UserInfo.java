@@ -2,18 +2,20 @@ package com.deahtstroke.loginsample.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.validation.annotation.Validated;
 
-@Setter
-@Getter
-@Builder
 @Entity
+@Data
+@Builder
 @Table(name = "user_info")
-@NoArgsConstructor
 @AllArgsConstructor
+@Validated
+@NoArgsConstructor
 public class UserInfo {
 
     @Id
     @Column(name = "userid")
+    @NonNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
     private Integer userId;
 

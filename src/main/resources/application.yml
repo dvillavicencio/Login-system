@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/${DATABASE_NAME}
+    url: jdbc:postgresql://${POSTGRES_DATABASE_HOST}:5432/postgres
     username: ${POSTGRES_ROOT_USER}
     password: ${POSTGRES_ROOT_PASSWORD}
+    driver-class-name: org.postgresql.Driver
   security:
     oauth2:
       client:
@@ -11,3 +11,8 @@ spring:
           github:
             clientId: ${GITHUB_CLIENT_ID}
             clientSecret: ${GITHUB_CLIENT_SECRET}
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
