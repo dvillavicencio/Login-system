@@ -35,6 +35,6 @@ jobs:
         with:
           name: spring-packaged-files
       - name: Make Maven Wrapper executable
-        run: --chmod=+x gradlew
+        run: chmod +x ./mvnw
       - name: Create Docker image
         run: docker build -t login-system .
