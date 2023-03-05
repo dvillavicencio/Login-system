@@ -32,9 +32,9 @@ jobs:
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
-      - name: Make Maven Wrapper executable
-        run: --chmod=+x gradlew
         with:
           name: spring-packaged-files
+      - name: Make Maven Wrapper executable
+        run: --chmod=+x gradlew
       - name: Create Docker image
         run: docker build -t login-system .
