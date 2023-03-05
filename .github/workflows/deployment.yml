@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: spring-packaged-files
-          path: target
+          path: .
   dockerize:
     needs: package
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
         with:
           name: spring-packaged-files
       - name: Create Docker image
-        run: docker build -t login-system ../.
+        run: docker build -t login-system .
