@@ -35,4 +35,4 @@ jobs:
         with:
           name: spring-packaged-files
       - name: Create Docker image
-        run: docker build -t login-system .
+        run: docker build -t login-system ../.
