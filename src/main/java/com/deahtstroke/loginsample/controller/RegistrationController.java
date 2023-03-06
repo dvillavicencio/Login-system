@@ -32,6 +32,7 @@ public class RegistrationController {
         var response = registrationService.registerNewUser(request);
         log.info("Finished registering new user in the database");
         return ResponseEntity.ok(response);
+
     }
 
 }
