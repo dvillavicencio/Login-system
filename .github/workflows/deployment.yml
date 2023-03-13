@@ -6,8 +6,8 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
-on: push
+name: Deployment Pipeline Login System
+on: workflow_dispatch
 jobs:
   package:
     runs-on: ubuntu-latest
